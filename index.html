@@ -1,13 +1,25 @@
 <!doctype html>
-<html>
+<html lang="en">
+
 	<head>
 		<meta charset="utf-8">
+
+		<title>reveal.js – The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
-
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet2" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -20,30 +32,322 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
 	</head>
+
 	<body>
+
 		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section class="fullpage"> <!--............. Slide ..................-->
+					<div class="centrado">
+						<h1>AIGI</h1>
+						<h3>Aeroport Intel·ligent i Gestió d'Instal·lacions</h3>
+					</div>
+				</section>
+
+				<section> <!--............. Slide ..................-->
+					<h2>Aeroport Intel·ligent</h2><br><br><br>
+					<p>Aeroport Intel·ligent: Aeroport dotat de mecanismes intel·ligents amb l'objectiu de millorar:</p>
+						<ul>
+							<li>Gestió de les operacions (eficiència, sostenibilitat)</li>
+							<li>Experiència dels usuarios</li>
+							<li>Ús intensiu de les TIC</li>
+
+						</ul>
+				</section>
+
+				<section>
+					<h2>Àmbits Aeroport Intel·ligent</h2><br><br>
+					<p>Infraestructura de comunicacions: Cablejada o XSF</p>
+					<p>Eficàcia operacional en:</p>
+					<ul>
+						<li>Equipatges</li>
+						<li>Controls de seguretat</li>
+						<li>Gestió d'empleats</li>
+						<li>Energia i medi ambient</li>
+						<li>Experiència dels passatgers</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>TIC en Aeroport Intel·ligent</h2><br><br><br>
+					<p>Principals components de les TIC:</p>
+					<ol>
+						<li class="fragment">Obtenció de dades</li>
+						<li class="fragment">Transport de dades</li>
+						<li class="fragment">Emmagatzematge de dades</li>
+						<li class="fragment">Resultats</li>
+					</ol>
+				</section>
+
+				<section class="fullpage">
+					<div class="centrado">
+					  <h1>WSN</h1><br>
+						<h2>Wireless Sensor Network</h2>
+					</div>
+				</section>
+
+				<section>
+					<section>
+						<h2>802.15.4</h2><br>
+						<p>WPAN Task 4</p>
+						<p>Requeriments:</p>
+						<div class="left">
+							<ul>
+				       <li>Simple</li>
+				       <li>Baix consum</li>
+						 </ul>
+						</div>
+						<div class="right">
+							<ul>
+				       <li>Eficient</li>
+				       <li>Suportar cicles de treball</li>
+						 </ul>
+					 </div><br><br><br>
+						<p>Tipologia de Nodes:</p>
+						<ul>
+							<li>FFD: Full Function Device</li>
+							<li>RFD: Reduced Function Device</li>
+						</ul>
+					</section>
+
+					<section><br>
+						<p>Tipologia de xarxa:</p>
+						<ul>
+							<li>Estrella</li>
+							<li>Peer-to-peer</li>
+						</ul><br><br><br>
+						<table class="table table-striped">
+						<thead>
+						  <tr>
+						    <th scope="col">#</th>
+						    <th scope="col">f (Hz)</th>
+						    <th scope="col"># Canals</th>
+						    <th scope="col">Velocitat (kbps)</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+						    <th scope="row">1</th>
+						    <td>868 MHz</td>
+						    <td style="text-align: center">1</td>
+						    <td style="text-align: center">20</td>
+						  </tr>
+						  <tr>
+						    <th scope="row">2</th>
+						    <td>915 MHz</td>
+						    <td style="text-align: center">10</td>
+						    <td style="text-align: center">40</td>
+						  </tr>
+						  <tr>
+								<th scope="row">3</th>
+						    <td>2.4 GHz</td>
+						    <td style="text-align: center">16</td>
+						    <td style="text-align: center">250</td>
+						  </tr>
+						</tbody>
+						</table>
+					</section>
+
+					<section>
+						<p>PPDU: Physical Protocol Data Unit -> Trama = entre 0 i 127 bytes</p>
+						<p>Trama + petita que Eth (1500 bytes) -> SW, HW millor processat, + simple i EFICIENT</p><br>
+						<p>Capa MAC:</p>
+						<ul>
+							<li>Gestiona l'accés al medi:</li>
+								<li class="ul-2level">
+									<ul>
+										<li>Beacon: Sincronització, no hi ha retard, estructura Supertrama</li>
+										<li>Sense: Retard, CSMA/CA</li>
+									</ul>
+								</li>
+							<li>Fiabilitat: Opcional (AKN)</li>
+							<li>Seguretat: Sí</li>
+							<li>Supertrama: 15-245s, B | CAP | CFP | Idle Period</li>
+							<li>Connexió a Internet: Sí</li>
+						</ul>
+					</section>
+				</section>
+
+				<section class="fullpage">
+					<h2>6LoWPAN</h2><br>
+					<p>IPv6 Low Power WPAN</p>
+					<p>Mecanismes:</p>
+								<ul>
+									<li>Autoconfiguració d'adreces:</li>
+									<li class="ul-2level">
+										<ul>
+											<li>Prefix xarxa: Global/Local</li>
+											<li>Interface ID: MAC 802.15.4 (Llarga/curta)</li>
+										</ul>
+									</li>
+									<li>Compressió capçaleres i fragmentació</li>
+									<li class="ul-2level">
+										<ul>
+											<li>IpV6: 1280 bytes</li>
+											<li>802.15.4: 127 bytes</li>
+										</ul>
+									</li>
+									<li>Format trama</li>
+									<li>Optimització Neigbor Discovery</li>
+								</ul>
+				</section>
+				<section>
+					<section>
+						<h2>RPL</h2>
+						<p>Neix de la necessitat d'utilitzar un protocol d'encaminament route-over basat en IP</p>
+						<p><strong>IPv6 Routing Protocol for Low Power and Lossy Networks</strong></p>
+						<p>Tipologia DAG (graf acíclic) optimitzat per a:</p>
+						<ul>
+							<li>MP2P - Multipoint to Point</li>
+							<li>P2MP - Point to Multipoint</li>
+							<li>P2P - Point to Point</li>
+						</ul>
+						<p>Els nodes envien periòdicament missatges DIO (Dodag Info Object = "Hello")</p>
+						<p>Incorporació d'un node: quan coneix la info (rep DIO/envia DIS), determina els seus veins i designa Default Parent</p>
+					</section>
+
+					<section>
+						<p>Objective Function (OF) -> Mitjantçan mètrica i restriccions, permet triar a un node el seu Default Parent.</p><br>
+						<p>Rutes:</p>
+						<ul>
+							<li>Upward: Node envia info al Def. Parent</li>
+							<li>Downward: Nodes envien DAO (Dodag Adv. Object) al Def. Parent (Akn opt) fins l'arrel, que:</li>
+							<li class="ul-2level">
+								<ul>
+									<li>Storing Mode: Els nodes intermitjos guarden taula d'encaminament (Destí, Next Hop)</li>
+									<li>Non Storing Mode: Només l'arrel té guarda la taula. En la capçelera hi han els nodes intermitjos.</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>CoAP</h2> <br>
+						<p>HTTP -> Inadecuat per restriccions de xarxa:</p>
+						<ul>
+							<li>Missatges massa llargs</li>
+							<li>Massa BW, memòria, energia sensors i no suporta sleep nodes</li>
+						</ul>
+						<p>CoAP (Constrained Application Protocol) es basa en UDP:</p>
+						<ul>
+							<li>Model REST (Servidor - Client)</li>
+							<li class="ul-2level">
+								<ul>
+									<li>Petició - Resposta: GET, POST, PUT, DELETE</li>
+									<li>Missatges: CON, NON, AKN, RST</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<p>Format missatges:</p>
+						<ul>
+							<li>Capçalera entre 4bytes i 32 bytes (max)</li>
+							<li>Missatge de 16bytes</li>
+						</ul> <br><br>
+						<p>Tipus de resposta</p>
+						<ul>
+							<li>Piggybacked: Akn + Data -> = missatge</li>
+							<li>eparada: Akn i Data -> different missatge</li>
+						</ul> <br><br>
+						<p>Caché que guarda peticions (no ha de demanar-la més)</p>
+						<p>Proxy: Agent substitutiu que actua en nom d'una altra persona/entitat. Pot fer de Servidor o Client</p>
+						<p>Oberve: Si un node es vol subscriure a un servidor que notifiqui canvis del seu recurs -> GET (Observe)</p>
+					</section>
+				</section>
+
+
+
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>Vertical Slides</h2>
+						<p>Slides can be nested inside of each other.</p>
+						<p>Use the <em>Space</em> key to navigate through all slides.</p>
+						<br>
+						<a href="#" class="navigate-down">
+							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section>
+					<section>
+						<h2>Basement Level 1</h2>
+						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+					</section>
+					<section>
+						<h2>Basement Level 2</h2>
+						<p>That's it, time to go back up.</p>
+						<br>
+						<a href="#/2">
+							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+						</a>
+					</section>
+				</section>
+
+
+
+
+				<section>
+					<section id="fragments">
+						<h2>Fragments</h2>
+						<p>Hit the next arrow...</p>
+						<p class="fragment">... to step through ...</p>
+						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
+
+						<aside class="notes">
+							This slide has fragments which are also stepped through in the notes window.
+						</aside>
+					</section>
+
+
+
+
+
 			</div>
+
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 
 		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
+
+			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+				height: "100%",
+
+
+
+
+
+				transition: 'zoom', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
+
 		</script>
+
 	</body>
 </html>
